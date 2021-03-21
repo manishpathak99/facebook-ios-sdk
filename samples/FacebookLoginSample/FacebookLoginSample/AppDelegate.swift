@@ -18,14 +18,28 @@
 
 import FacebookLogin
 import UIKit
+import FacebookCore
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    var window: UIWindow?
     func application(
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
+        
+//        FlagFetcher.fetchFlags { result in
+//            if case let .success(flags) = result,
+//              flags.contains("use_facebook") {
+//                // Initialize the SDK
+//                ApplicationDelegate.shared.application(
+//                    application,
+//                    didFinishLaunchingWithOptions: launchOptions
+//                )
+//            }
+//        }
+        
         ApplicationDelegate.shared.application(
             application,
             didFinishLaunchingWithOptions: launchOptions
@@ -48,17 +62,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // MARK: UISceneSession Lifecycle
 
-    @available(iOS 13.0, *)
-    func application(
-        _ application: UIApplication,
-        configurationForConnecting connectingSceneSession: UISceneSession,
-        options: UIScene.ConnectionOptions
-    ) -> UISceneConfiguration {
-        return UISceneConfiguration(
-            name: "Default Configuration",
-            sessionRole: connectingSceneSession.role
-        )
-    }
+//    @available(iOS 13.0, *)
+//    func application(
+//        _ application: UIApplication,
+//        configurationForConnecting connectingSceneSession: UISceneSession,
+//        options: UIScene.ConnectionOptions
+//    ) -> UISceneConfiguration {
+//        return UISceneConfiguration(
+//            name: "Default Configuration",
+//            sessionRole: connectingSceneSession.role
+//        )
+//    }
 
 }
 
